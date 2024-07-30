@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="baner">
+        <img src="./assets/images/logo_saylaniwelfareusa.22bf709605809177256c.png" alt="">
+    </div>
+    <div class="content">
+        <h1>Registration Form - SMIT</h1>
+        <p>Services-Education-Registration</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Registration</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Download ID card</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+      
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                      <div class="forms">
+                        <form>
+                          <label><span>Select City*</span></label>
+                          <div>
+                            <input list="city" type="text" name="" id="inputs" placeholder="Enter City">
+                           
+                                <datalist id="city">
+                                  <option value="Karachi">
+                                  <option value="Lahore">
+                                  <option value="Hyderabad">
+  
+                                </datalist>
+                          </div>
+                          
+                          <label><span>Select campus*</span></label>
+                          <div>
+                            <input list="Campus" type="text" name="" id=""  placeholder="Enter Campus">
+                                <datalist id="Campus">
+                                  <option value="Gulshan e Iqbal">
+                                  <option value="Saddar">
+                                  <option value="Numaish">
+                                </datalist>
+                          </div>
+                          
+                          <label><span>Full name*</span></label>
+                          <div>
+                            <input type="text" name="" id=""  placeholder="Enter Ful Name">
+                          </div>
+                          
+                          <label><span>Email*</span></label>
+                          <div>
+                            <input type="text" name="" id=""  placeholder="Enter Email">
+                          </div>
+                          <label><span>CNIC*</span></label>
+                          <div>
+                            <input type="number" name="" id=""  placeholder="Enter CNIC ">
+                          </div>
+                          <label><span>Date of birth*</span></label>
+                          <div>
+                            <input type="date" name="" id=""  placeholder="Enter DOB">
+                          </div>
+                          <label><span>Address*</span></label>
+                          <div>
+                            <input type="text" name="" id=""  placeholder="Enter Address">
+                          </div>
+                              
+                           </form>
+                          <div class="leftforms">
+                            <form>
+                              <label><span>Select course or event*</span></label>
+                              <div>
+                                <input list="course" type="text" name="" id=""  placeholder="Select Course">
+                               
+                                <datalist id="course">
+                                  <option value="Web Developement">
+                                  <option value="Graphic Designing">
+                                  <option value="UI/UX Developer">
+  
+                                </datalist>
+                              </div>
+                              
+                              <label><span>Select class preference*</span></label>
+                              <div>
+                                <input list="class" type="text" name="" id=""  placeholder="Enter Claas Preference">
+                                <datalist id="class">
+                                  <option value="Weekends(Sunday Saturday)">
+                                  <option value="Weekdays(Monday - Friday)">
+                                  <option value="Both">
+  
+                                </datalist>
+                              </div>
+                              
+                              <label><span>Father name*</span></label>
+                              <div>
+                                <input type="text" name="" id="" placeholder="Enter Father name" >
+                              </div>
+                              
+                              <label><span>Phone*</span></label>
+                              <div>
+                                <input type="number" name="" id="" placeholder="Enter Phone">
+                              </div>
+                              <label><span>Father's CNIC (optional)</span></label>
+                              <div>
+                                <input type="number"  id="" placeholder="Enter Father CNIC">
+                              </div>
+                              <label><span>Select gender*</span></label>
+                              <div>
+                                <input list="gender" type="search" name="" id="" placeholder="Enter Father name">
+                                <datalist id="gender">
+                                  <option value="Female">
+                                  <option value="Male">
+                                  <option value="Beechka">
+                                </datalist>
+                              </div>
+                              <label><span>Image*</span></label>
+                              <div>
+                                <input type="file" name="" id="file" onchange="uploadimg()">
+                              </div>
+                              
+                            
+                               </form>
+                          </div>
+                          
+                      </div>
+                      <div class="regulations">
+                        <p id="Succees"></p>
+                        <button onclick="register()">SUBMIT</button>
+  
+                        <ul>
+                          <li>
+                            I hereby, solemnly declare that the data and facts mentioned herein are true and correct to the best of my knowledge. Further, I will abide by all the established and future regulations and policies of SWIT
+                          </li>
+                          <li>
+                            I hereby accept the responsibilities of good conduct and guarantee that I will not be involved in any other activity, political or ethical, but learning during my stay in the program.
+                          </li>
+                          <li>
+                            Defiance will render my admission canceled at any point in time.
+                          </li>
+                          <li>
+                            Upon completion, of the course, I will complete the required project by SWIT.
+                          </li>
+                          <li>
+                            It's mandatory for female students to wear abaya/hijab in the class
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <div class="Download">
+                      <div>
+                        <label>CNIC(Which you provided during form submission)</label>
+                        <input list="Campus" type="number" name="" id="authenticate"  placeholder="Enter The CNIC You Entered During Submitting the Form">
+                            <datalist id="Campus">
+                              <option value="Gulshan e Iqbal">
+                              <option value="Saddar">
+                              <option value="Numaish">
+                            </datalist>
+                            
+                          </div>
+                          <button onclick="idcard()">Submit</button>
+                          <div class="card">
+                            <h3>SMIT ID-CARD</h3>
+                            <div class="image">
+                                <img src="" alt="" id="simages">
+                            </div>
+                            <div class="info">
+                            
+                            </div>
+                            <div class="rules">
+                              <ul>
+                                <li>
+                                  Upon completion, of the course, I will complete the required project by SMIT.
+                                </li>
+                                <li>
+                                  It's mandatory for female students to wear abaya/hijab in the class
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                        
+              
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
